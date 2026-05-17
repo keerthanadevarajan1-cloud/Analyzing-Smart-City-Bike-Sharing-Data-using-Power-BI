@@ -2,7 +2,7 @@
 Public bike-sharing systems generate continuous data from hundreds of stations across different cities. The task is to analyze this real-time bike station dataset to understand station performance, usage efficiency, and operational patterns across cities.  Applying Power BI skills—from data cleaning and modeling to DAX and dashboarding.
 
 # Dataset:
-Source: Dataset link
+Source: [Dataset link](https://github.com/GeethaGunasekaran1/Project-Dataset/raw/refs/heads/main/bike-stations-sharing-data.xlsx)
 
 # 🚲 Bike Sharing System Analysis Dashboard
 
