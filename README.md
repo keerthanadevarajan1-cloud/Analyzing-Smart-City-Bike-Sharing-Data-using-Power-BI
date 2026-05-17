@@ -168,6 +168,7 @@ A map visualization displayed bike station locations using:
 * Identified high-density bike regions
 * Visualized geographic bike availability patterns
 
+---
 
 ## 7️⃣ Interactive Slicers
 
@@ -200,23 +201,13 @@ A tabular visualization was used to display:
 
 ---
 
-# 📌 Key Insights
-
-* Most bike stations were operational and active
-* Certain regions showed higher stale station counts
-* Bike availability varied significantly across locations
-* Geographic analysis helped identify dense operational zones
-* Capacity utilization patterns highlighted optimization opportunities
-
----
-
-# 📷 Dashboard Preview
-
 ## Cleaning & Transformation Steps
-
+https://drive.google.com/file/d/1hoS0Hwapfc_FnMzC2imMwz8a3njhIf1_/view?usp=drive_link
 
 
 ## Final Dashboard
+<img width="798" height="784" alt="image" src="https://github.com/user-attachments/assets/1a2db0aa-3c73-40c9-9453-74bba95d34d3" />
+<img width="922" height="484" alt="image" src="https://github.com/user-attachments/assets/3b47541d-7518-40f4-94cf-1ed05c35947b" />
 
 
 
@@ -236,39 +227,3 @@ Through this project, I learned:
 
 This project successfully demonstrates the use of **Power BI for operational analytics and visualization**.
 The dashboard provides valuable insights into bike station availability, operational efficiency, and geographic distribution, enabling better monitoring and decision-making for bike sharing systems.
-
-# Executive summary
-
-The provided dataset is station master data (station ID, name/address, latitude/longitude, banking/bonus flags,
-station key). It does not include any revenue, cost, trip, or distance (km) fields, so questions like “highest/lowest
-revenue per km” and “revenue trends over years” cannot be computed from this extract alone. What we can
-conclude today is primarily about network coverage, data quality, and operational readiness by city/contract.
-What the current data can tell us (actionable now)
-1) Coverage footprint by city/contract
-• Use Station_Key (or “Contract Name” derived from it) to quantify station counts by city/contract and
-identify where the network is concentrated (e.g., multiple stations visible for Mulhouse, Lyon, Seville, etc.
-in the sample).
-• This supports decisions like where to prioritize data feeds, QA checks, and operational monitoring.
-2) Data quality and usability readiness
-• Geo Valid (lat/long present and within bounds) enables a clear map-ready coverage rate; any
-invalid/missing coordinates block spatial analysis and routing-based KPIs.
-• Is Test Station flags non-production stations; these should be excluded from performance reporting to
-avoid skew.
-3) Product/service feature coverage
-• Banking and Bonus allow a quick segmentation of stations by payment capability and bonus eligibility—
-useful for identifying service parity gaps by city/contract (e.g., “which cities have low banking-enabled
-station coverage?”).
-Why the required revenue questions cannot be answered (and what’s needed)
-To answer:
-• Which cities earned highest/lowest revenue per km?
-• How have revenues changed over the years?
-• Which cities are underperforming with low cost efficiency?
-You need at minimum (at city and date granularity):
-1. Revenue: fare revenue (and ideally pass/subscription allocation rules) with a date field.
-2. Distance (km): either actual trip kilometers (preferred) or estimated distance from trip OD
-(origin/destination) coordinates.
-3. Cost: operating cost by city/date (maintenance, rebalancing, staffing, capex allocation), or a proxy (service
-hours, truck rolls, etc.).
-4. Time series structure: a transaction or daily summary table with City/Contract, Date, Revenue, Trips, Km,
-Cost.
-Without those, any “revenue per km” or “cost efficiency” conclusion would be speculative.
